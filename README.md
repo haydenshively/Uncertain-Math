@@ -1,3 +1,4 @@
+![Python package](https://github.com/haydenshively/Uncertain-Math/workflows/Python%20package/badge.svg)
 # Uncertain-Math
 
 An engineering toolkit for taking measurements and propagating uncertainty
