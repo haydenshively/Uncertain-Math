@@ -13,7 +13,10 @@ class Parameter(Number):
         return cls(t_estimator=other.t_estimator)
 
     def __iand__(self, measurement):
-        self.measurements.append(measurement)
+        if isinstance(measurement, list):
+            self.measurements += measurement
+        else:
+            self.measurements.append(measurement)
         return self
 
     @property
