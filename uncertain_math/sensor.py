@@ -10,3 +10,6 @@ class Sensor:
 
     def reading(self, value):
         return Measurement(value, self.resolution)
+
+    def readings(self, values):
+        return list(map(lambda v: Measurement(v, self.resolution), values))
