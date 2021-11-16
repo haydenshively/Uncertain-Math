@@ -6,8 +6,9 @@ def pretty_string(mean, uncertainty):
     decimals = -math.floor(math.log(uncertainty, 10))
     mean = round(mean, decimals)
     uncertainty = round(uncertainty, decimals)
+    decimals = max(decimals, 0)
     # noinspection PyStringFormat
-    return f'{{:.{decimals}f}} +/- {{:.{decimals}}}'.format(mean, uncertainty)
+    return f'{{:.{decimals}f}} +/- {{:.{decimals}f}}'.format(mean, uncertainty)
 
 
 class Number(abc.ABC):
